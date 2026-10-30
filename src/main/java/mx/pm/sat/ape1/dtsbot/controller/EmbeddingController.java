@@ -12,8 +12,10 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class EmbeddingController {
 
+
     @GetMapping("/generate")
     public String generate(@RequestParam String message) {
-        return "";
+        
+        return null;
     }
 }
