@@ -36,3 +36,6 @@ build/
 .env
 /run.bat
 /compile.bat
+/results/**
+/insumos/**
+

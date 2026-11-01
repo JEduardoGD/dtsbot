@@ -1,0 +1,6 @@
+Se reporta que el aplicativo certisat crm está tardando más de 8 minutos en generar certificados de firma electrónica.
+SE INFORMA LENTITUD EN EL APLICATIVO CERTISAT_CRM AL TRATAR DE GENERAR Y/O REVOCAR CERTIFICADOS, DE HASTA 10 MNUTOS
+SE COMUNICA USUARIO VÍA TELEFÓNICA JOSEFIA PEREZ BOTE DE GRUPO ALTI REPORTANDO EXTREMA LENTITUD EN CERTISAT CRM.
+Lentitud en la aplicación CERTISAT CRM para la generación de certificados de primera vez y de renovación, tardando más de 6 minutos, se aplica contingencia. MS Y MST
+LENTITUD EN CERTISAT
+Buen día, reportando lentitud en guardar certificado en CertiSAT (CRM), de 4 minutos, se adjunta evidencia
