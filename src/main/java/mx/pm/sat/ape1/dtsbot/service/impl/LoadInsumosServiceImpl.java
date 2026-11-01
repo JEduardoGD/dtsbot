@@ -74,12 +74,13 @@ public class LoadInsumosServiceImpl implements LoadInsumosService {
 
                 String reqs = null;
 
-                String incs = null;
-
+                //String incs = null;
+                String incs = cell.getRowIndex() + "";
+                
                 cell = row.getCell(ORIGINAL_TEXT_COL_NUM);
                 String originalText = cell.getStringCellValue();
 
-                incidentList.add(new Incident(aplicative, reqs, incs, originalText));
+                incidentList.add(new Incident(excelFile, aplicative, reqs, incs, originalText));
             }
         } catch (IOException e) {
 
