@@ -1,14 +1,13 @@
 # Repository notes
 
-- The root `pom.xml` builds a Java 21 Spring Boot command-line app (`DtsbotApplication` implements `CommandLineRunner`), not a web server. `dtsbot_py/` is a separate Python Word-document generator, not a Maven module; follow its `AGENTS.md` and `README.md` for Python changes (including the README history requirement).
+- The root `pom.xml` is a Java 21 Spring Boot CLI; `DtsbotApplication` runs on startup as a `CommandLineRunner`. `dtsbot_py/` is a separate Python document generator, not part of Maven.
 
-## Java (run from repository root)
+## Java
 
-- `./mvnw compile` checks production sources; `./mvnw spring-boot:run` starts the runner. The existing `@SpringBootTest` source imports JUnit, but `pom.xml` has no test dependency, so `./mvnw test` cannot compile tests as configured.
-- `application.properties` optionally loads root `.env` and references `OPEN_AI_API_KEY`; `.env.example` lists the expected variable names.
-- The runner reads workbooks from root `insumos/` (the property key is misspelled `insumos.loation`) and root `context.txt`, then writes reports under root `results/`. These input/output files are gitignored. The loader selects `.xls`/`.xlsx` names but opens them with `XSSFWorkbook`; use `.xlsx` inputs, with headers in row 1 and data in columns A/B of the first sheet.
-- Incident scoring in `DtsbotApplication.run` is currently a hard-coded response with a random probability; the real `dtsCallService.proceessCall(...)` invocation is commented out. Do not treat a run as an OpenAI classification test. The Postgres/Chroma services in `docker-compose.yml` are not used by this runner.
+- Run from the repository root: `./mvnw compile` for production-source verification; `./mvnw spring-boot:run` starts the batch runner. `pom.xml` has no test dependency although a test imports JUnit, so `./mvnw test` is not configured to compile the test source.
+- `src/main/resources/application.properties` optionally imports root `.env`, expects `OPEN_AI_API_KEY`, and sets the input directory using the misspelled key `insumos.loation`. The runner loads root `context.txt` and workbooks from `insumos/`; the loader opens files as `XSSFWorkbook`, so provide `.xlsx` files with headers on row 1 and application/text values in columns A/B of sheet 1. These inputs and report outputs under `results/` are gitignored.
+- `DtsbotApplication.run` currently submits a hard-coded response with a random probability; the `dtsCallService.proceessCall(...)` call is commented out. Running it does not test live OpenAI classification.
 
 ## Python
 
-- Run from `dtsbot_py/`: `python -m pip install -r requirements.txt`, then `python dtsbot_py.py INCS<number>/INCS<number>.txt`. The script uses `examples/NNNNNNN_DTS.docx` relative to itself and writes `<number>_DTS.docx` beside the input TXT; a successful run overwrites that output file.
+- For changes under `dtsbot_py/`, follow `dtsbot_py/AGENTS.md` and `dtsbot_py/README.md`; the latter requires a history entry for each relevant change. Run from `dtsbot_py/`: `python -m pip install -r requirements.txt`, then `python dtsbot_py.py INCS<number>/INCS<number>.txt`. The generated `<number>_DTS.docx` is written beside the input; successful runs overwrite an existing output.
