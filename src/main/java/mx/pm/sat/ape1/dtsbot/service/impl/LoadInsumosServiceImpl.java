@@ -35,8 +35,10 @@ public class LoadInsumosServiceImpl implements LoadInsumosService {
     
     private static final int SHEET_NUM_DATA = 0;
     private static final int START_ROW_NUM_DATA = 1;
-    private static final int APLICATIVE_COL_NUM = 0;
-    private static final int ORIGINAL_TEXT_COL_NUM = 1;
+    private static final int APLICATIVE_COL_NUM = 4;
+    private static final int ORIGINAL_TEXT_COL_NUM = 10;
+    private static final int INCS_COL_NUM = 0;
+    private static final int REQS_COL_NUM = 2;
 
     @Override
     public List<String> loadInsumos() {
@@ -65,20 +67,29 @@ public class LoadInsumosServiceImpl implements LoadInsumosService {
         try (java.io.InputStream is = new FileInputStream(path.toFile());
                 org.apache.poi.ss.usermodel.Workbook workbook = new XSSFWorkbook(is)) {
             Sheet sheet = workbook.getSheetAt(SHEET_NUM_DATA);
-            for (int rowCount = START_ROW_NUM_DATA; rowCount <= sheet.getLastRowNum(); rowCount++) {
+            int lastRowNum = sheet.getLastRowNum();
+            for (int rowCount = START_ROW_NUM_DATA; rowCount <= lastRowNum; rowCount++) {
                 Row row = sheet.getRow(rowCount);
+                if (row == null) {
+                    continue;
+                }
                 Cell cell;
 
                 cell = row.getCell(APLICATIVE_COL_NUM);
-                String aplicative = cell.getStringCellValue();
+                String aplicative = cell != null ? cell.getStringCellValue() : null;
 
-                String reqs = null;
+                cell = row.getCell(REQS_COL_NUM);
+                String reqs = cell != null ? cell.getStringCellValue() : null;
 
-                //String incs = null;
-                String incs = cell.getRowIndex() + "";
-                
+                cell = row.getCell(INCS_COL_NUM);
+                String incs = cell != null ? cell.getStringCellValue() : null;
+
                 cell = row.getCell(ORIGINAL_TEXT_COL_NUM);
-                String originalText = cell.getStringCellValue();
+                String originalText = cell != null ? cell.getStringCellValue() : null;
+
+                if (aplicative == null || reqs == null || incs == null || originalText == null) {
+                    continue;
+                }
 
                 incidentList.add(new Incident(excelFile, aplicative, reqs, incs, originalText));
             }

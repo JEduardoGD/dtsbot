@@ -1,22 +1,30 @@
 package mx.pm.sat.ape1.dtsbot.service.impl;
 
 import java.io.File;
-import java.math.BigDecimal;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
-import org.apache.commons.io.FilenameUtils;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import mx.pm.sat.ape1.dtsbot.dto.Incident;
 import mx.pm.sat.ape1.dtsbot.dto.IncidentProcessResponse;
+import mx.pm.sat.ape1.dtsbot.service.CreatePropertiesIncsService;
 import mx.pm.sat.ape1.dtsbot.service.EvaluatorService;
 import mx.pm.sat.ape1.dtsbot.service.ReportService;
+import mx.pm.sat.ape1.dtsbot.service.exception.CreatePropertiesIncsServiceException;
+import mx.pm.sat.ape1.dtsbot.service.exception.EvaluatorServiceException;
 import mx.pm.sat.ape1.dtsbot.service.exception.ReportServiceException;
+import mx.pm.sat.ape1.dtsbot.util.EvaluatorStaticValues;
 import mx.pm.sat.ape1.dtsbot.util.FileUtil;
+import mx.pm.sat.ape1.dtsbot.util.OnFlyVarsUtil;
+import mx.pm.sat.ape1.dtsbot.util.SoUtil;
+import mx.pm.sat.ape1.dtsbot.util.exception.OnFlyVarsUtilException;
+import mx.pm.sat.ape1.dtsbot.util.exception.SoUtilException;
 
 @Service
 @RequiredArgsConstructor
@@ -24,67 +32,112 @@ import mx.pm.sat.ape1.dtsbot.util.FileUtil;
 public class EvaluatorServiceImpl implements EvaluatorService {
 
     private final ReportService reportService;
-
-    private static final BigDecimal LOW_LIMIT = BigDecimal.valueOf(0.5);
-    private static final BigDecimal HIGH_LMIT = BigDecimal.valueOf(0.8);
-
-    private static final String DOT_TXT = ".txt";
-    private static final DateTimeFormatter CUSTOM_FORMATTER = DateTimeFormatter.ofPattern("yyMMdd_HHmm");
-    private static final String UNDERSCORE = "_";
-    private static final String PARENT_PATH = "results";
-    private static final String CONFIRMED_PATH = "confirmed";
-    private static final String SUSPICIOUS_PATH = "suspicious";
-    private static final String UNCONFIRMED_PATH = "unconfirmed";
+    private final CreatePropertiesIncsService createPropertiesIncsService;
 
     @Override
-    public void process(Incident incident, IncidentProcessResponse incidentProcessResponse,
-            LocalDateTime localDateTime) {
-        String fileBaseName = FilenameUtils.getBaseName(incident.filename());
+    public void process(Incident incident, IncidentProcessResponse incidentProcessResponse, LocalDateTime localDateTime)
+            throws EvaluatorServiceException {
+        String fileBaseName = null;
+        String safeFilename = null;
+        try {
+            fileBaseName = OnFlyVarsUtil.getFileBaseName(incident);
+            safeFilename = OnFlyVarsUtil.getSafeFilename(fileBaseName, EvaluatorStaticValues.DOT_TXT);
+        } catch (OnFlyVarsUtilException e) {
+            throw new EvaluatorServiceException(e);
+        }
 
-        String sanitizedFileName = FileUtil.toSafeFilename(fileBaseName, DOT_TXT);
+        String path = EvaluatorStaticValues.PARENT_PATH + File.separator
+                + localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
+                + FileUtil.toSafeFilename(safeFilename, EvaluatorStaticValues.DOT_TXT);
 
-        String path = PARENT_PATH + File.separator + localDateTime.format(CUSTOM_FORMATTER) + UNDERSCORE
-                + FileUtil.toSafeFilename(sanitizedFileName, DOT_TXT);
+        String suspiciousFilePath = path + File.separator + EvaluatorStaticValues.SUSPICIOUS_PATH + File.separator
+                + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
+                        + EvaluatorStaticValues.SUSPICIOUS_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.DOT_TXT);
 
-        String suspiciousPath = path + File.separator + SUSPICIOUS_PATH + File.separator
-                + localDateTime.format(CUSTOM_FORMATTER) + UNDERSCORE + SUSPICIOUS_PATH + UNDERSCORE + sanitizedFileName
-                + DOT_TXT;
+        String confirmedFilePath = path + File.separator + EvaluatorStaticValues.CONFIRMED_PATH + File.separator
+                + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
+                        + EvaluatorStaticValues.CONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.DOT_TXT);
 
-        String confirmedPath = path + File.separator + CONFIRMED_PATH + File.separator
-                + localDateTime.format(CUSTOM_FORMATTER) + UNDERSCORE + CONFIRMED_PATH + UNDERSCORE + sanitizedFileName
-                + DOT_TXT;
+        String unconfirmedFilePath = path + File.separator + EvaluatorStaticValues.CONFIRMED_PATH + File.separator
+                + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
+                        + EvaluatorStaticValues.CONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.DOT_TXT);
 
-        String unconfirmedPath = path + File.separator + UNCONFIRMED_PATH + File.separator
-                + localDateTime.format(CUSTOM_FORMATTER) + UNDERSCORE + UNCONFIRMED_PATH + UNDERSCORE + sanitizedFileName
-                + DOT_TXT;
+        File unconfirmedFile = Paths.get(unconfirmedFilePath).toFile();
+        File suspiciousFile = Paths.get(suspiciousFilePath).toFile();
+        File confirmedFile = Paths.get(confirmedFilePath).toFile();
 
-        File unconfirmedFile = Paths.get(unconfirmedPath).toFile();
-        File suspiciousFile = Paths.get(suspiciousPath).toFile();
-        File confirmedFile = Paths.get(confirmedPath).toFile();
-
-        if (incidentProcessResponse.likely().compareTo(LOW_LIMIT) < 0) {
+        if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) < 0) {
             try {
                 reportService.appendToReport(unconfirmedFile, incident.incs());
             } catch (ReportServiceException e) {
                 log.error(e.getMessage());
+                throw new EvaluatorServiceException(e);
             }
         }
 
-        if (incidentProcessResponse.likely().compareTo(LOW_LIMIT) >= 0
-                && incidentProcessResponse.likely().compareTo(HIGH_LMIT) < 0) {
+        if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0
+                && incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) < 0) {
             try {
                 reportService.appendToReport(suspiciousFile, incident.incs());
             } catch (ReportServiceException e) {
                 log.error(e.getMessage());
+                throw new EvaluatorServiceException(e);
             }
         }
 
-        if (incidentProcessResponse.likely().compareTo(HIGH_LMIT) > 0) {
+        if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) > 0) {
             try {
                 reportService.appendToReport(confirmedFile, incident.incs());
             } catch (ReportServiceException e) {
                 log.error(e.getMessage());
+                throw new EvaluatorServiceException(e);
             }
         }
+
+        // generar archivo de propiedades para DTS
+        if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0) {
+            Path parentPath;
+            Path propertiesPath = null;
+            if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) < 0) {
+                parentPath = Paths.get(suspiciousFilePath).getParent();
+                try {
+                    createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident);
+                } catch (CreatePropertiesIncsServiceException e) {
+                    throw new EvaluatorServiceException(e);
+                }
+                propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath,  incident));
+            }
+            if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) >= 0) {
+                parentPath = Paths.get(confirmedFilePath).getParent();
+                try {
+                    createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident);
+                } catch (CreatePropertiesIncsServiceException e) {
+                    throw new EvaluatorServiceException(e);
+                }
+                propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
+            }
+            Integer numeroIncs = OnFlyVarsUtil.extractNumFromIncs(incident);
+            List<String> pythonCommand = createRunPythonCommands(propertiesPath, numeroIncs);
+            try {
+                if(SoUtil.runningSoInstructions(pythonCommand/*, "dtsbot_py"*/) != 0) {
+                    log.error("Error running so call");
+                }
+            } catch (SoUtilException e) {
+                throw new EvaluatorServiceException(e);
+            }
+        }
+    }
+
+    private List<String> createRunPythonCommands(Path propertiesPath, Integer numeroIncs) {
+        List<String> commandsList = new ArrayList<>();
+        //commandsList.add(".venv/bin/python");
+        commandsList.add("./dtsbot_py/run_dtsbot.sh");
+        commandsList.add(String.format("%s", propertiesPath));
+        commandsList.add("--output-dir");
+        commandsList.add(String.format("%s",propertiesPath.getParent().toString()));
+        return commandsList;
     }
 }
