@@ -3,6 +3,8 @@ package mx.pm.sat.ape1.dtsbot.service.exception;
 import java.io.IOException;
 
 import mx.pm.sat.ape1.dtsbot.exception.DtsBotException;
+import mx.pm.sat.ape1.dtsbot.util.exception.OnFlyVarsUtilException;
+import mx.pm.sat.ape1.dtsbot.util.exception.SoUtilException;
 import mx.pm.sat.ape1.dtsbot.util.exception.TextUtilException;
 
 public class ServiceException extends DtsBotException {
@@ -14,6 +16,22 @@ public class ServiceException extends DtsBotException {
     }
 
     public ServiceException(TextUtilException e) {
+        super(e);
+    }
+
+    public ServiceException(OnFlyVarsUtilException e) {
+        super(e);
+    }
+
+    public ServiceException(ReportServiceException e) {
+        super(e);
+    }
+
+    public ServiceException(CreatePropertiesIncsServiceException e) {
+        super(e);
+    }
+
+    public ServiceException(SoUtilException e) {
         super(e);
     }
 

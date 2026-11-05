@@ -18,6 +18,8 @@ import mx.pm.sat.ape1.dtsbot.service.DtsCallService;
 import mx.pm.sat.ape1.dtsbot.service.EvaluatorService;
 import mx.pm.sat.ape1.dtsbot.service.LoadInsumosService;
 import mx.pm.sat.ape1.dtsbot.service.exception.DtsCallServiceException;
+import mx.pm.sat.ape1.dtsbot.service.exception.EvaluatorServiceException;
+import mx.pm.sat.ape1.dtsbot.util.EnvironmentService;
 
 @SpringBootApplication
 @RequiredArgsConstructor
@@ -27,6 +29,11 @@ public class DtsbotApplication implements CommandLineRunner {
     private final LoadInsumosService loadInsumosService;
     private final DtsCallService dtsCallService;
     private final EvaluatorService evaluatorService;
+    private final EnvironmentService environmentService;
+
+    private static final String DEFAULT_REASONING = """
+            El mensaje reporta lentitud extrema en el aplicativo CertiSat CRM, con tiempos superiores a 10 minutos para revocar y generar certificados, lo que corresponde directamente a la categoría "lentitud en certisat"
+            """;
 
     public static void main(String[] args) {
         SpringApplication.run(DtsbotApplication.class, args);
@@ -39,7 +46,6 @@ public class DtsbotApplication implements CommandLineRunner {
             for (String excelFile : insumosList) {
                 LocalDateTime localDateTime = LocalDateTime.now();
                 List<Incident> incidentList = loadInsumosService.loadExcelInsumoFile(excelFile);
-                incidentList.stream().forEach(i -> log.info(i.toString()));
 
                 List<Message> messagesContextList;
                 try {
@@ -50,14 +56,21 @@ public class DtsbotApplication implements CommandLineRunner {
                 }
 
                 for (Incident incident : incidentList) {
-                    // IncidentProcessResponse incidentProcessResponse =
-                    // dtsCallService.proceessCall(messagesContextList, incident);
-                    IncidentProcessResponse incidentProcessResponse = new IncidentProcessResponse(
-                            """
-                                    El mensaje reporta lentitud extrema en el aplicativo CertiSat CRM, con tiempos superiores a 10 minutos para revocar y generar certificados, lo que corresponde directamente a la categoría "lentitud en certisat"
-                                    """,
-                            BigDecimal.valueOf(ThreadLocalRandom.current().nextDouble(0.1, 0.99)));
-                    evaluatorService.process(incident, incidentProcessResponse, localDateTime);
+                    IncidentProcessResponse incidentProcessResponse;
+                    if (!environmentService.isUseFakeIa()) {
+                        incidentProcessResponse = dtsCallService.proceessCall(messagesContextList, incident);
+                    } else {
+                        incidentProcessResponse = new IncidentProcessResponse(DEFAULT_REASONING,
+                                BigDecimal.valueOf(ThreadLocalRandom.current().nextDouble(0.1, 0.99)));
+                    }
+                    try {
+                        evaluatorService.process(incident, incidentProcessResponse, localDateTime);
+                    } catch (EvaluatorServiceException e) {
+                        // TODO Auto-generated catch block
+                        throw new Exception(e);
+                    }
+
+                    break;
                 }
             }
         }

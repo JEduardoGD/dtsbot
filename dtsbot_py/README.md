@@ -6,6 +6,24 @@ El objetivo del proyecto es generar archivos DTS en formato Word a partir de un 
 python dtsbot_py.py propiedades.txt
 ```
 
+Opcionalmente, indica el directorio de salida con `--output-dir`; si no se indica, el documento se guarda junto al TXT de propiedades:
+
+```text
+python dtsbot_py.py INCS00003799504/INCS00003799504.txt --output-dir resultados
+```
+
+También puedes ejecutar `run_dtsbot.sh`, que activa `.venv`, pasa todos sus argumentos al programa y desactiva el entorno al terminar:
+
+```text
+./run_dtsbot.sh INCS00003799504/INCS00003799504.txt --output-dir resultados
+```
+
+En Windows, usa el equivalente `run_dtsbot.bat` con los mismos argumentos:
+
+```text
+run_dtsbot.bat INCS00003799504/INCS00003799504.txt --output-dir resultados
+```
+
 Instala la dependencia antes de ejecutar el script:
 
 ```text
@@ -30,3 +48,6 @@ Actualmente también contiene documentos de ejemplo en `examples/` y un archivo 
 - 2026-11-01: Se valida que `FECHA_ANALISIS` sea una fecha existente con formato `DD/MM/AAAA`.
 - 2026-11-01: Se advierte si `FECHA_ANALISIS` no coincide con la fecha de ejecución, sin interrumpir el proceso.
 - 2026-11-01: Se añade `python-docx` para reemplazar todas las apariciones de las propiedades en el documento DTS generado.
+- 2026-11-04: Se permite indicar el directorio de salida mediante `--output-dir`.
+- 2026-11-04: Se añade `run_dtsbot.sh` para ejecutar el generador dentro de `.venv` y desactivar el entorno al finalizar.
+- 2026-11-04: Se añade `run_dtsbot.bat` para ejecutar el generador desde Windows dentro de `.venv`.

@@ -12,4 +12,12 @@ public class UtilException extends DtsBotException {
         super(e);
     }
 
+    public UtilException(String string) {
+        super(string);
+    }
+
+    public UtilException(InterruptedException e) {
+        super(e);
+    }
+
 }

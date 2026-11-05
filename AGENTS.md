@@ -1,13 +1,10 @@
 # Repository notes
 
-- The root `pom.xml` is a Java 21 Spring Boot CLI; `DtsbotApplication` runs on startup as a `CommandLineRunner`. `dtsbot_py/` is a separate Python document generator, not part of Maven.
+- The root is a Java 21 Spring Boot CLI; `DtsbotApplication` is a startup `CommandLineRunner`. `dtsbot_py/` is a separate Python generator, outside Maven; follow its `AGENTS.md` and `README.md` when changing it (including the README history requirement).
 
 ## Java
 
-- Run from the repository root: `./mvnw compile` for production-source verification; `./mvnw spring-boot:run` starts the batch runner. `pom.xml` has no test dependency although a test imports JUnit, so `./mvnw test` is not configured to compile the test source.
-- `src/main/resources/application.properties` optionally imports root `.env`, expects `OPEN_AI_API_KEY`, and sets the input directory using the misspelled key `insumos.loation`. The runner loads root `context.txt` and workbooks from `insumos/`; the loader opens files as `XSSFWorkbook`, so provide `.xlsx` files with headers on row 1 and application/text values in columns A/B of sheet 1. These inputs and report outputs under `results/` are gitignored.
-- `DtsbotApplication.run` currently submits a hard-coded response with a random probability; the `dtsCallService.proceessCall(...)` call is commented out. Running it does not test live OpenAI classification.
-
-## Python
-
-- For changes under `dtsbot_py/`, follow `dtsbot_py/AGENTS.md` and `dtsbot_py/README.md`; the latter requires a history entry for each relevant change. Run from `dtsbot_py/`: `python -m pip install -r requirements.txt`, then `python dtsbot_py.py INCS<number>/INCS<number>.txt`. The generated `<number>_DTS.docx` is written beside the input; successful runs overwrite an existing output.
+- From the repository root, use `./mvnw compile` to verify production sources and `./mvnw spring-boot:run` to run the batch. Maven has no test dependency configured, though `src/test` imports JUnit; `./mvnw test` is not a usable check without fixing that configuration.
+- Runtime inputs are root `context.txt` and `.xlsx` files in `insumos/` (both gitignored). `application.properties` imports optional root `.env`, references `OPEN_AI_API_KEY` and `DEBUG`, and configures the directory with the misspelled property `insumos.loation`—keep the spelling aligned with `LoadInsumosServiceImpl` unless deliberately renaming both.
+- The workbook loader uses sheet 1, starts at row 2 (row index 1), and reads incident/application/request/original text from columns A/C/E/K. It lists `.xls` as well as `.xlsx`, but opens with `XSSFWorkbook`; use `.xlsx` inputs.
+- `DEBUG=true` selects a hard-coded reasoning and random probability. With debug off, the runner calls OpenAI. It currently breaks after processing the first incident in each workbook, so a run does not process all rows. Reports are written under gitignored `results/`.

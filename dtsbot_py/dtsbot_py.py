@@ -67,22 +67,19 @@ def main(argv=None):
 
     parser = argparse.ArgumentParser(description="Genera archivos DTS de Word.")
     parser.add_argument("propiedades", help="Archivo TXT con las propiedades")
+    parser.add_argument(
+        "--output-dir",
+        type=Path,
+        help="Directorio donde guardar el documento generado (por defecto, junto al TXT)",
+    )
     args = parser.parse_args(arguments)
     ruta_propiedades = Path(args.propiedades)
 
-    directorio = re.fullmatch(r"INCS(\d+)", ruta_propiedades.parent.name)
     nombre_archivo = re.fullmatch(r"INCS(\d+)", ruta_propiedades.stem)
-    if not directorio:
-        print("Error: el directorio debe llamarse INCS seguido del número de incidente.", file=sys.stderr)
-        return 1
     if not nombre_archivo:
         print("Error: el archivo debe llamarse INCS seguido del número de incidente y tener extensión .txt.", file=sys.stderr)
         return 1
-    numero_ruta = directorio.group(1).lstrip("0") or "0"
     numero_archivo = nombre_archivo.group(1).lstrip("0") or "0"
-    if numero_ruta != numero_archivo:
-        print("Error: el número de incidente del directorio no coincide con el del archivo.", file=sys.stderr)
-        return 1
 
     try:
         with ruta_propiedades.open(encoding="utf-8") as archivo:
@@ -119,8 +116,8 @@ def main(argv=None):
 
     numero_propiedad = valores_requeridos["número"]
     numero_propiedad_normalizado = numero_propiedad.lstrip("0") or "0"
-    if not re.fullmatch(r"\d+", numero_propiedad) or numero_propiedad_normalizado != numero_ruta:
-        print("Error: la propiedad número no coincide con el número de la ruta y el archivo.", file=sys.stderr)
+    if not re.fullmatch(r"\d+", numero_propiedad) or numero_propiedad_normalizado != numero_archivo:
+        print("Error: la propiedad número no coincide con el número del archivo.", file=sys.stderr)
         return 1
 
     fecha_analisis = valores_requeridos["FECHA_ANALISIS"]
@@ -138,8 +135,10 @@ def main(argv=None):
         )
 
     ejemplo = Path(__file__).resolve().parent / "examples" / "NNNNNNN_DTS.docx"
-    destino = ruta_propiedades.parent / f"{numero_ruta}_DTS.docx"
+    directorio_salida = args.output_dir or ruta_propiedades.parent
+    destino = directorio_salida / f"{numero_archivo}_DTS.docx"
     try:
+        directorio_salida.mkdir(parents=True, exist_ok=True)
         shutil.copy2(ejemplo, destino)
         documento = Document(destino)
         marcadores = {
