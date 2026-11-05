@@ -60,14 +60,17 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                         + EvaluatorStaticValues.CONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
                         + EvaluatorStaticValues.DOT_TXT);
 
-        String unconfirmedFilePath = path + File.separator + EvaluatorStaticValues.CONFIRMED_PATH + File.separator
+        String unconfirmedFilePath = path + File.separator + EvaluatorStaticValues.UNCONFIRMED_PATH + File.separator
                 + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
-                        + EvaluatorStaticValues.CONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.UNCONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
                         + EvaluatorStaticValues.DOT_TXT);
 
         File unconfirmedFile = Paths.get(unconfirmedFilePath).toFile();
         File suspiciousFile = Paths.get(suspiciousFilePath).toFile();
         File confirmedFile = Paths.get(confirmedFilePath).toFile();
+        
+        Path parentPath = null;
+        Path propertiesPath = null;
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) < 0) {
             try {
@@ -76,6 +79,8 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                 log.error(e.getMessage());
                 throw new EvaluatorServiceException(e);
             }
+            parentPath = Paths.get(unconfirmedFilePath).getParent();
+            propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
         }
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0
@@ -86,6 +91,8 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                 log.error(e.getMessage());
                 throw new EvaluatorServiceException(e);
             }
+            parentPath = Paths.get(suspiciousFilePath).getParent();
+            propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
         }
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) > 0) {
@@ -95,34 +102,20 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                 log.error(e.getMessage());
                 throw new EvaluatorServiceException(e);
             }
+            parentPath = Paths.get(confirmedFilePath).getParent();
+            propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
         }
 
-        // generar archivo de propiedades para DTS
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0) {
-            Path parentPath;
-            Path propertiesPath = null;
-            if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) < 0) {
-                parentPath = Paths.get(suspiciousFilePath).getParent();
-                try {
-                    createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident);
-                } catch (CreatePropertiesIncsServiceException e) {
-                    throw new EvaluatorServiceException(e);
-                }
-                propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath,  incident));
-            }
-            if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) >= 0) {
-                parentPath = Paths.get(confirmedFilePath).getParent();
-                try {
-                    createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident);
-                } catch (CreatePropertiesIncsServiceException e) {
-                    throw new EvaluatorServiceException(e);
-                }
-                propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
+            try {
+                createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident);
+            } catch (CreatePropertiesIncsServiceException e) {
+                throw new EvaluatorServiceException(e);
             }
             Integer numeroIncs = OnFlyVarsUtil.extractNumFromIncs(incident);
             List<String> pythonCommand = createRunPythonCommands(propertiesPath, numeroIncs);
             try {
-                if(SoUtil.runningSoInstructions(pythonCommand/*, "dtsbot_py"*/) != 0) {
+                if (SoUtil.runningSoInstructions(pythonCommand/* , "dtsbot_py" */) != 0) {
                     log.error("Error running so call");
                 }
             } catch (SoUtilException e) {
@@ -133,11 +126,11 @@ public class EvaluatorServiceImpl implements EvaluatorService {
 
     private List<String> createRunPythonCommands(Path propertiesPath, Integer numeroIncs) {
         List<String> commandsList = new ArrayList<>();
-        //commandsList.add(".venv/bin/python");
+        // commandsList.add(".venv/bin/python");
         commandsList.add("./dtsbot_py/run_dtsbot.sh");
         commandsList.add(String.format("%s", propertiesPath));
         commandsList.add("--output-dir");
-        commandsList.add(String.format("%s",propertiesPath.getParent().toString()));
+        commandsList.add(String.format("%s", propertiesPath.getParent().toString()));
         return commandsList;
     }
 }

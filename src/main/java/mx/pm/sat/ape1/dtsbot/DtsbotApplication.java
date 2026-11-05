@@ -69,8 +69,6 @@ public class DtsbotApplication implements CommandLineRunner {
                         // TODO Auto-generated catch block
                         throw new Exception(e);
                     }
-
-                    break;
                 }
             }
         }
