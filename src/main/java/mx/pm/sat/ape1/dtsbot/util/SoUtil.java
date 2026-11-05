@@ -24,7 +24,7 @@ public abstract class SoUtil {
             ProcessBuilder pb = new ProcessBuilder(command);
             //File workingDir = new File(workingDirStr);
             //pb.directory(workingDir);
-            pb.inheritIO();
+            //pb.inheritIO();<<<<
             Process process = pb.start();
 
             // Read the output from the Python script

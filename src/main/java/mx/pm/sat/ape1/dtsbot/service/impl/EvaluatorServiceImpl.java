@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -33,6 +34,9 @@ public class EvaluatorServiceImpl implements EvaluatorService {
 
     private final ReportService reportService;
     private final CreatePropertiesIncsService createPropertiesIncsService;
+    
+    @Value("${env.so}")
+    private String so;
 
     @Override
     public void process(Incident incident, IncidentProcessResponse incidentProcessResponse, LocalDateTime localDateTime)
@@ -127,7 +131,12 @@ public class EvaluatorServiceImpl implements EvaluatorService {
     private List<String> createRunPythonCommands(Path propertiesPath, Integer numeroIncs) {
         List<String> commandsList = new ArrayList<>();
         // commandsList.add(".venv/bin/python");
-        commandsList.add("./dtsbot_py/run_dtsbot.sh");
+        if (so.equals(EvaluatorStaticValues.WINDOWS)) {
+            commandsList.add("dtsbot_py/run_dtsbot.bat");
+        }
+        if (so.equals(EvaluatorStaticValues.LINUX)) {
+            commandsList.add("./dtsbot_py/run_dtsbot.sh");
+        }
         commandsList.add(String.format("%s", propertiesPath));
         commandsList.add("--output-dir");
         commandsList.add(String.format("%s", propertiesPath.getParent().toString()));

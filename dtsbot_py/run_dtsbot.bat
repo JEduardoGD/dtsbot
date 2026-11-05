@@ -1,8 +1,10 @@
-@echo off
+@echo on
 setlocal
 
 set "SCRIPT_DIR=%~dp0"
 set "ACTIVATE_SCRIPT=%SCRIPT_DIR%.venv\Scripts\activate.bat"
+
+echo %ACTIVATE_SCRIPT%
 
 if not exist "%ACTIVATE_SCRIPT%" (
     echo Error: virtual environment activation script not found: "%ACTIVATE_SCRIPT%" 1>&2

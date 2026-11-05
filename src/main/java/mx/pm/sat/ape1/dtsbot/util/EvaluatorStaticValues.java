@@ -4,6 +4,9 @@ import java.math.BigDecimal;
 import java.time.format.DateTimeFormatter;
 
 public class EvaluatorStaticValues {
+    public static final String WINDOWS = "windows";
+    public static final String LINUX = "linux";
+    
     public static final BigDecimal LOW_LIMIT = BigDecimal.valueOf(0.5);
     public static final BigDecimal HIGH_LMIT = BigDecimal.valueOf(0.8);
 
