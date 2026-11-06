@@ -33,6 +33,11 @@ public abstract class SoUtil {
             while ((line = reader.readLine()) != null) {
                 log.info("Python Output: " + line);
             }
+            
+            BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            while ((line = errorReader.readLine()) != null) {
+                log.error("Python Output: " + line);
+            }
 
             // Wait for the process to complete and check the exit code
             return process.waitFor();

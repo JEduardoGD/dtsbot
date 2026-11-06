@@ -152,13 +152,16 @@ public class EvaluatorServiceImpl implements EvaluatorService {
         // commandsList.add(".venv/bin/python");
         if (so.equals(EvaluatorStaticValues.WINDOWS)) {
             commandsList.add(".\\run_dtsbot_exe.bat");
+            commandsList.add(String.format("\"%s\"", incsPropertiesAbsolutePath));
+            commandsList.add(String.format("\"%s\"", dtsTemplateAbsoluteLocation));
+            commandsList.add(String.format("\"%s\"", incsPropertiesAbsolutePath.getParent().toString()));
         }
         if (so.equals(EvaluatorStaticValues.LINUX)) {
-            commandsList.add("./dtsbot_py/run_dtsbot.sh");
+            commandsList.add("./run_dtsbot_py.sh");
+            commandsList.add(String.format("%s", incsPropertiesAbsolutePath));
+            commandsList.add(String.format("%s", dtsTemplateAbsoluteLocation));
+            commandsList.add(String.format("%s", incsPropertiesAbsolutePath.getParent().toString()));
         }
-        commandsList.add(String.format("\"%s\"", incsPropertiesAbsolutePath));
-        commandsList.add(String.format("\"%s\"", dtsTemplateAbsoluteLocation));
-        commandsList.add(String.format("\"%s\"", incsPropertiesAbsolutePath.getParent().toString()));
         return commandsList;
     }
 }
