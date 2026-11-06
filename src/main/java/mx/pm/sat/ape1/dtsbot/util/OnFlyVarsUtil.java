@@ -36,8 +36,8 @@ public abstract class OnFlyVarsUtil {
         return numeroIncs;
     }
 
-    public static String createIncPropertiesFileRoute(Path parentPath, Incident incident) {
-        return parentPath + File.separator + incident.incs() + File.separator + incident.incs()
+    public static String createIncPropertiesFileRoute(Path path, Incident incident) {
+        return path + File.separator + incident.incs() + File.separator + incident.incs()
                 + EvaluatorStaticValues.DOT_TXT;
     }
 }

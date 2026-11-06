@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -33,36 +34,42 @@ public class EvaluatorServiceImpl implements EvaluatorService {
 
     private final ReportService reportService;
     private final CreatePropertiesIncsService createPropertiesIncsService;
+    
+    @Value("${env.so}")
+    private String so;
+    
+    @Value("${dtstemplate.location}")
+    private String dtsTemplateLocationStr;
 
     @Override
     public void process(Incident incident, IncidentProcessResponse incidentProcessResponse, LocalDateTime localDateTime)
             throws EvaluatorServiceException {
-        String fileBaseName = null;
-        String safeFilename = null;
+        String incidentPropertiesfileBasename = null;
+        String safeIincidentPropertiesfileBasename = null;
         try {
-            fileBaseName = OnFlyVarsUtil.getFileBaseName(incident);
-            safeFilename = OnFlyVarsUtil.getSafeFilename(fileBaseName, EvaluatorStaticValues.DOT_TXT);
+            incidentPropertiesfileBasename = OnFlyVarsUtil.getFileBaseName(incident);
+            safeIincidentPropertiesfileBasename = OnFlyVarsUtil.getSafeFilename(incidentPropertiesfileBasename, EvaluatorStaticValues.DOT_TXT);
         } catch (OnFlyVarsUtilException e) {
             throw new EvaluatorServiceException(e);
         }
 
         String path = EvaluatorStaticValues.PARENT_PATH + File.separator
                 + localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
-                + FileUtil.toSafeFilename(safeFilename, EvaluatorStaticValues.DOT_TXT);
+                + FileUtil.toSafeFilename(safeIincidentPropertiesfileBasename, EvaluatorStaticValues.DOT_TXT);
 
         String suspiciousFilePath = path + File.separator + EvaluatorStaticValues.SUSPICIOUS_PATH + File.separator
                 + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
-                        + EvaluatorStaticValues.SUSPICIOUS_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.SUSPICIOUS_PATH + EvaluatorStaticValues.UNDERSCORE + safeIincidentPropertiesfileBasename
                         + EvaluatorStaticValues.DOT_TXT);
 
         String confirmedFilePath = path + File.separator + EvaluatorStaticValues.CONFIRMED_PATH + File.separator
                 + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
-                        + EvaluatorStaticValues.CONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.CONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeIincidentPropertiesfileBasename
                         + EvaluatorStaticValues.DOT_TXT);
 
         String unconfirmedFilePath = path + File.separator + EvaluatorStaticValues.UNCONFIRMED_PATH + File.separator
                 + (localDateTime.format(EvaluatorStaticValues.CUSTOM_FORMATTER) + EvaluatorStaticValues.UNDERSCORE
-                        + EvaluatorStaticValues.UNCONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeFilename
+                        + EvaluatorStaticValues.UNCONFIRMED_PATH + EvaluatorStaticValues.UNDERSCORE + safeIincidentPropertiesfileBasename
                         + EvaluatorStaticValues.DOT_TXT);
 
         File unconfirmedFile = Paths.get(unconfirmedFilePath).toFile();
@@ -70,7 +77,9 @@ public class EvaluatorServiceImpl implements EvaluatorService {
         File confirmedFile = Paths.get(confirmedFilePath).toFile();
         
         Path parentPath = null;
-        Path propertiesPath = null;
+        //Path propertiesPath = null;
+        //Path absolutePath;
+        Path dtsTemplateAbsoluteLocation;
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) < 0) {
             try {
@@ -80,7 +89,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                 throw new EvaluatorServiceException(e);
             }
             parentPath = Paths.get(unconfirmedFilePath).getParent();
-            propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
+            //propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
         }
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0
@@ -92,7 +101,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                 throw new EvaluatorServiceException(e);
             }
             parentPath = Paths.get(suspiciousFilePath).getParent();
-            propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
+            //propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
         }
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.HIGH_LMIT) > 0) {
@@ -103,8 +112,22 @@ public class EvaluatorServiceImpl implements EvaluatorService {
                 throw new EvaluatorServiceException(e);
             }
             parentPath = Paths.get(confirmedFilePath).getParent();
-            propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
+            //propertiesPath = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
         }
+        
+        /*
+        if (propertiesPath == null) {
+            throw new EvaluatorServiceException("propertiesPath is null");
+        }
+        absolutePath = propertiesPath.toAbsolutePath();
+        */
+        
+        //Path parentAbsolutePath = parentPath.toAbsolutePath();
+        
+        String incsPropertiesAbsolutePathStr = OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident);
+        Path incsPropertiesAbsolutePath = Paths.get(incsPropertiesAbsolutePathStr).toAbsolutePath();
+        
+        dtsTemplateAbsoluteLocation = Paths.get(dtsTemplateLocationStr).toAbsolutePath();
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0) {
             try {
@@ -112,8 +135,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
             } catch (CreatePropertiesIncsServiceException e) {
                 throw new EvaluatorServiceException(e);
             }
-            Integer numeroIncs = OnFlyVarsUtil.extractNumFromIncs(incident);
-            List<String> pythonCommand = createRunPythonCommands(propertiesPath, numeroIncs);
+            List<String> pythonCommand = createRunPythonCommands(incsPropertiesAbsolutePath, dtsTemplateAbsoluteLocation);
             try {
                 if (SoUtil.runningSoInstructions(pythonCommand/* , "dtsbot_py" */) != 0) {
                     log.error("Error running so call");
@@ -124,13 +146,22 @@ public class EvaluatorServiceImpl implements EvaluatorService {
         }
     }
 
-    private List<String> createRunPythonCommands(Path propertiesPath, Integer numeroIncs) {
+    private List<String> createRunPythonCommands(Path incsPropertiesAbsolutePath, Path dtsTemplateAbsoluteLocation) {
+        //.\run_dtsbot_exe.bat "C:\Users\Eduardo\Documents\dtsbot_py\INCS00003799504\INCS00003799504.txt" "C:\Users\Eduardo\Documents\dtsbot_py\examples\NNNNNNN_DTS.docx" "C:\Users\Eduardo\Documents\dtsbot_py\INCS00003799504"
         List<String> commandsList = new ArrayList<>();
         // commandsList.add(".venv/bin/python");
-        commandsList.add("./dtsbot_py/run_dtsbot.sh");
-        commandsList.add(String.format("%s", propertiesPath));
-        commandsList.add("--output-dir");
-        commandsList.add(String.format("%s", propertiesPath.getParent().toString()));
+        if (so.equals(EvaluatorStaticValues.WINDOWS)) {
+            commandsList.add(".\\run_dtsbot_exe.bat");
+            commandsList.add(String.format("\"%s\"", incsPropertiesAbsolutePath));
+            commandsList.add(String.format("\"%s\"", dtsTemplateAbsoluteLocation));
+            commandsList.add(String.format("\"%s\"", incsPropertiesAbsolutePath.getParent().toString()));
+        }
+        if (so.equals(EvaluatorStaticValues.LINUX)) {
+            commandsList.add("./run_dtsbot_py.sh");
+            commandsList.add(String.format("%s", incsPropertiesAbsolutePath));
+            commandsList.add(String.format("%s", dtsTemplateAbsoluteLocation));
+            commandsList.add(String.format("%s", incsPropertiesAbsolutePath.getParent().toString()));
+        }
         return commandsList;
     }
 }

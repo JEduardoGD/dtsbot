@@ -23,4 +23,8 @@ public class EvaluatorServiceException extends ServiceException {
         super(e);
     }
 
+    public EvaluatorServiceException(String string) {
+        super(string);
+    }
+
 }

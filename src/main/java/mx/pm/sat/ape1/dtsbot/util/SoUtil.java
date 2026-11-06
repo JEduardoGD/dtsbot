@@ -24,14 +24,19 @@ public abstract class SoUtil {
             ProcessBuilder pb = new ProcessBuilder(command);
             //File workingDir = new File(workingDirStr);
             //pb.directory(workingDir);
-            pb.inheritIO();
+            //pb.inheritIO();<<<<
             Process process = pb.start();
 
             // Read the output from the Python script
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
-                log.info("Python Output: " + line);
+                log.debug("Python Output: " + line);
+            }
+            
+            BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
+            while ((line = errorReader.readLine()) != null) {
+                log.error("Python Output: " + line);
             }
 
             // Wait for the process to complete and check the exit code

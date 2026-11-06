@@ -1,10 +1,10 @@
 # Repository notes
 
-- The root is a Java 21 Spring Boot CLI; `DtsbotApplication` is a startup `CommandLineRunner`. `dtsbot_py/` is a separate Python generator, outside Maven; follow its `AGENTS.md` and `README.md` when changing it (including the README history requirement).
+- This repository has two independent tools: a Java 21/Spring Boot batch app at the root and a standalone Python DOCX generator in `dtsbot_py/` (not part of Maven). For Python changes, follow `dtsbot_py/AGENTS.md`.
 
-## Java
+## Java batch app
 
-- From the repository root, use `./mvnw compile` to verify production sources and `./mvnw spring-boot:run` to run the batch. Maven has no test dependency configured, though `src/test` imports JUnit; `./mvnw test` is not a usable check without fixing that configuration.
-- Runtime inputs are root `context.txt` and `.xlsx` files in `insumos/` (both gitignored). `application.properties` imports optional root `.env`, references `OPEN_AI_API_KEY` and `DEBUG`, and configures the directory with the misspelled property `insumos.loation`—keep the spelling aligned with `LoadInsumosServiceImpl` unless deliberately renaming both.
-- The workbook loader uses sheet 1, starts at row 2 (row index 1), and reads incident/application/request/original text from columns A/C/E/K. It lists `.xls` as well as `.xlsx`, but opens with `XSSFWorkbook`; use `.xlsx` inputs.
-- `DEBUG=true` selects a hard-coded reasoning and random probability. With debug off, the runner calls OpenAI. It currently breaks after processing the first incident in each workbook, so a run does not process all rows. Reports are written under gitignored `results/`.
+- Run commands from the repository root: `./mvnw compile` checks production code; `./mvnw spring-boot:run` runs the batch. `./mvnw test` currently fails because `src/test` imports JUnit but `pom.xml` declares no test dependency.
+- `DtsbotApplication` is the `CommandLineRunner`. It reads `context.txt` and workbook files in `insumos/`, then writes reports under `results/`. These runtime files/directories are gitignored. The optional root `.env` is imported by Spring; relevant settings are `OPEN_AI_API_KEY`, `USE_FAKE_IA`, `SO`, and `DST_TEMPLATE_LOCATION`.
+- The loader reads the first worksheet starting at row index 1 and maps zero-based columns A/C/E/K to incident/application/request/original text. It filters `.xls` and `.xlsx` names but uses `XSSFWorkbook`, so inputs must be `.xlsx`.
+- `insumos.loation` is misspelled in both `application.properties` and `LoadInsumosServiceImpl`; update both if correcting it.
