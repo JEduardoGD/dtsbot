@@ -31,7 +31,7 @@ public abstract class SoUtil {
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
-                log.info("Python Output: " + line);
+                log.debug("Python Output: " + line);
             }
             
             BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
