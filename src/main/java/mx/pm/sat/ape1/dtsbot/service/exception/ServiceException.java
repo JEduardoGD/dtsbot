@@ -35,4 +35,8 @@ public class ServiceException extends DtsBotException {
         super(e);
     }
 
+    public ServiceException(String string) {
+        super(string);
+    }
+
 }
