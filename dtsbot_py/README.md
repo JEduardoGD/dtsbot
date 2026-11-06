@@ -1,27 +1,9 @@
 # dtsbot_py
 
-El objetivo del proyecto es generar archivos DTS en formato Word a partir de un archivo de propiedades TXT y un archivo de ejemplo. El script `dtsbot_py.py` requiere la ruta del archivo de propiedades:
+El objetivo del proyecto es generar archivos DTS en formato Word a partir de un archivo de propiedades TXT y una plantilla Word. El script `dtsbot_py.py` requiere las rutas absolutas del archivo de propiedades, `NNNNNNN_DTS.docx` y la carpeta existente donde se guardará el resultado:
 
 ```text
-python dtsbot_py.py propiedades.txt
-```
-
-Opcionalmente, indica el directorio de salida con `--output-dir`; si no se indica, el documento se guarda junto al TXT de propiedades:
-
-```text
-python dtsbot_py.py INCS00003799504/INCS00003799504.txt --output-dir resultados
-```
-
-También puedes ejecutar `run_dtsbot.sh`, que activa `.venv`, pasa todos sus argumentos al programa y desactiva el entorno al terminar:
-
-```text
-./run_dtsbot.sh INCS00003799504/INCS00003799504.txt --output-dir resultados
-```
-
-En Windows, usa el equivalente `run_dtsbot.bat` con los mismos argumentos:
-
-```text
-run_dtsbot.bat INCS00003799504/INCS00003799504.txt --output-dir resultados
+python dtsbot_py.py "C:\ruta\absoluta\INCS00003799504\INCS00003799504.txt" "C:\ruta\absoluta\examples\NNNNNNN_DTS.docx" "C:\ruta\absoluta\salida"
 ```
 
 Instala la dependencia antes de ejecutar el script:
@@ -48,6 +30,6 @@ Actualmente también contiene documentos de ejemplo en `examples/` y un archivo 
 - 2026-11-01: Se valida que `FECHA_ANALISIS` sea una fecha existente con formato `DD/MM/AAAA`.
 - 2026-11-01: Se advierte si `FECHA_ANALISIS` no coincide con la fecha de ejecución, sin interrumpir el proceso.
 - 2026-11-01: Se añade `python-docx` para reemplazar todas las apariciones de las propiedades en el documento DTS generado.
-- 2026-11-04: Se permite indicar el directorio de salida mediante `--output-dir`.
-- 2026-11-04: Se añade `run_dtsbot.sh` para ejecutar el generador dentro de `.venv` y desactivar el entorno al finalizar.
-- 2026-11-04: Se añade `run_dtsbot.bat` para ejecutar el generador desde Windows dentro de `.venv`.
+- 2026-11-06: Se exige que la ruta del archivo TXT de propiedades se pase como ruta absoluta.
+- 2026-11-06: Se exige que la ruta absoluta de la plantilla `NNNNNNN_DTS.docx` se pase como argumento.
+- 2026-11-06: Se recibe como argumento obligatorio la ruta absoluta de la carpeta de salida.

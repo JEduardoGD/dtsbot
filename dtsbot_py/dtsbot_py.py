@@ -67,19 +67,41 @@ def main(argv=None):
 
     parser = argparse.ArgumentParser(description="Genera archivos DTS de Word.")
     parser.add_argument("propiedades", help="Archivo TXT con las propiedades")
-    parser.add_argument(
-        "--output-dir",
-        type=Path,
-        help="Directorio donde guardar el documento generado (por defecto, junto al TXT)",
-    )
+    parser.add_argument("plantilla", help="Ruta absoluta de la plantilla NNNNNNN_DTS.docx")
+    parser.add_argument("salida", help="Ruta absoluta de la carpeta para el documento generado")
     args = parser.parse_args(arguments)
     ruta_propiedades = Path(args.propiedades)
+    ruta_plantilla = Path(args.plantilla)
+    carpeta_salida = Path(args.salida)
+    if not ruta_propiedades.is_absolute():
+        print("Error: la ruta del archivo TXT de propiedades debe ser absoluta.", file=sys.stderr)
+        return 1
+    if not ruta_plantilla.is_absolute():
+        print("Error: la ruta de la plantilla DOCX debe ser absoluta.", file=sys.stderr)
+        return 1
+    if not carpeta_salida.is_absolute():
+        print("Error: la ruta de la carpeta de salida debe ser absoluta.", file=sys.stderr)
+        return 1
+    if not carpeta_salida.is_dir():
+        print("Error: la carpeta de salida no existe o no es un directorio.", file=sys.stderr)
+        return 1
+    if ruta_plantilla.name != "NNNNNNN_DTS.docx":
+        print("Error: la plantilla debe llamarse NNNNNNN_DTS.docx.", file=sys.stderr)
+        return 1
 
+    directorio = re.fullmatch(r"INCS(\d+)", ruta_propiedades.parent.name)
     nombre_archivo = re.fullmatch(r"INCS(\d+)", ruta_propiedades.stem)
+    if not directorio:
+        print("Error: el directorio debe llamarse INCS seguido del número de incidente.", file=sys.stderr)
+        return 1
     if not nombre_archivo:
         print("Error: el archivo debe llamarse INCS seguido del número de incidente y tener extensión .txt.", file=sys.stderr)
         return 1
+    numero_ruta = directorio.group(1).lstrip("0") or "0"
     numero_archivo = nombre_archivo.group(1).lstrip("0") or "0"
+    if numero_ruta != numero_archivo:
+        print("Error: el número de incidente del directorio no coincide con el del archivo.", file=sys.stderr)
+        return 1
 
     try:
         with ruta_propiedades.open(encoding="utf-8") as archivo:
@@ -116,8 +138,8 @@ def main(argv=None):
 
     numero_propiedad = valores_requeridos["número"]
     numero_propiedad_normalizado = numero_propiedad.lstrip("0") or "0"
-    if not re.fullmatch(r"\d+", numero_propiedad) or numero_propiedad_normalizado != numero_archivo:
-        print("Error: la propiedad número no coincide con el número del archivo.", file=sys.stderr)
+    if not re.fullmatch(r"\d+", numero_propiedad) or numero_propiedad_normalizado != numero_ruta:
+        print("Error: la propiedad número no coincide con el número de la ruta y el archivo.", file=sys.stderr)
         return 1
 
     fecha_analisis = valores_requeridos["FECHA_ANALISIS"]
@@ -134,12 +156,9 @@ def main(argv=None):
             f"Advertencia: FECHA_ANALISIS ({fecha_analisis}) no coincide con la fecha actual ({date.today():%d/%m/%Y})."
         )
 
-    ejemplo = Path(__file__).resolve().parent / "examples" / "NNNNNNN_DTS.docx"
-    directorio_salida = args.output_dir or ruta_propiedades.parent
-    destino = directorio_salida / f"{numero_archivo}_DTS.docx"
+    destino = carpeta_salida / f"{numero_ruta}_DTS.docx"
     try:
-        directorio_salida.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(ejemplo, destino)
+        shutil.copy2(ruta_plantilla, destino)
         documento = Document(destino)
         marcadores = {
             "[<número>]": valores_requeridos["número"],
