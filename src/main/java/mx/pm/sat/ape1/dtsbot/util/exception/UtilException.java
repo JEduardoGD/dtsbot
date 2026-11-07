@@ -4,20 +4,15 @@ import java.io.IOException;
 
 import mx.pm.sat.ape1.dtsbot.exception.DtsBotException;
 
-public class UtilException extends DtsBotException {
+public abstract class UtilException extends RuntimeException {
 
     private static final long serialVersionUID = -6183667102560721330L;
 
-    public UtilException(IOException e) {
+    public UtilException(Exception e) {
         super(e);
     }
 
-    public UtilException(String string) {
-        super(string);
+    public UtilException(String mgs) {
+        super(mgs);
     }
-
-    public UtilException(InterruptedException e) {
-        super(e);
-    }
-
 }

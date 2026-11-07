@@ -1,5 +1,7 @@
 package mx.pm.sat.ape1.dtsbot.util.exception;
 
+import com.openai.models.beta.threads.runs.Run;
+
 import java.io.IOException;
 
 public class SoUtilException extends UtilException {

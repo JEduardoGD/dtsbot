@@ -66,6 +66,7 @@ public class LoadInsumosServiceImpl implements LoadInsumosService {
 
         try (java.io.InputStream is = new FileInputStream(path.toFile());
                 org.apache.poi.ss.usermodel.Workbook workbook = new XSSFWorkbook(is)) {
+            log.debug("loading '{}'", path.toString());
             Sheet sheet = workbook.getSheetAt(SHEET_NUM_DATA);
             int lastRowNum = sheet.getLastRowNum();
             for (int rowCount = START_ROW_NUM_DATA; rowCount <= lastRowNum; rowCount++) {
