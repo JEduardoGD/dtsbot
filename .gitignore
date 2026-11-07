@@ -36,7 +36,8 @@ build/
 .env
 /run.bat
 /compile.bat
-/results/**
-/insumos/**
+results/
+insumos/
 /context.txt
 dtsbot_py.spec
+logs/
