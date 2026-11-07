@@ -1,0 +1,37 @@
+@echo off
+cls
+
+set BRANCH=qa
+set JAVA_HOME=C:\sft\java\jdk-21.0.12.1
+set MAVEN_HOME=C:\sft\maven\apache-maven-3.9.16
+
+call %MAVEN_HOME%/bin/mvn -v
+
+echo.
+echo.
+echo "pulling changes"
+git checkout %BRANCH%
+git pull origin %BRANCH%
+
+echo.
+echo.
+echo "CREATE .venv"
+del /F /Q dtsbot_py\.venv
+python -m venv dtsbot_py\.venv
+
+echo.
+echo.
+echo "Create dtsbot_py.exe"
+del /F /Q dist
+call dtsbot_py\.venv\Scripts\activate.bat
+python -m pip install pyinstaller
+pip install -r dtsbot_py\requirements.txt
+python -m PyInstaller --onefile .\dtsbot_py\dtsbot_py.py
+call dtsbot_py\.venv\Scripts\deactivate.bat
+
+echo.
+echo.
+echo "Create JAR"
+call %MAVEN_HOME%/bin/mvn clean package -Dmaven.test.skip=true
+
+pause
