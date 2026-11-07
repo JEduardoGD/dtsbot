@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
+import mx.pm.sat.ape1.dtsbot.exception.DtsBotException;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -45,7 +46,12 @@ public class DtsbotApplication implements CommandLineRunner {
         if (insumosList != null) {
             for (String excelFile : insumosList) {
                 LocalDateTime localDateTime = LocalDateTime.now();
+                log.debug("loading insumos...");
                 List<Incident> incidentList = loadInsumosService.loadExcelInsumoFile(excelFile);
+                if(incidentList == null){
+                    throw new Exception("insumos is null");
+                }
+                log.debug("fond {} insumos", incidentList.size());
 
                 List<Message> messagesContextList;
                 try {

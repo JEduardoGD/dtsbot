@@ -138,7 +138,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
             List<String> pythonCommand = createRunPythonCommands(incsPropertiesAbsolutePath, dtsTemplateAbsoluteLocation);
             try {
                 if (SoUtil.runningSoInstructions(pythonCommand/* , "dtsbot_py" */) != 0) {
-                    log.error("Error running so call");
+                    log.error("An error occurs on running so call");
                 }
             } catch (SoUtilException e) {
                 throw new EvaluatorServiceException(e);

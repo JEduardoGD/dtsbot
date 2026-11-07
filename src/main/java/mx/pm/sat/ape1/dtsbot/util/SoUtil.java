@@ -31,19 +31,17 @@ public abstract class SoUtil {
             BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
             String line;
             while ((line = reader.readLine()) != null) {
-                log.debug("Python Output: " + line);
+                log.debug("Py Output: " + line);
             }
             
             BufferedReader errorReader = new BufferedReader(new InputStreamReader(process.getErrorStream()));
             while ((line = errorReader.readLine()) != null) {
-                log.error("Python Output: " + line);
+                log.error("Py Output: " + line);
             }
 
             // Wait for the process to complete and check the exit code
             return process.waitFor();
-        } catch (IOException e) {
-            throw new SoUtilException(e);
-        } catch (InterruptedException e) {
+        } catch (IOException | InterruptedException e) {
             throw new SoUtilException(e);
         }
     }
