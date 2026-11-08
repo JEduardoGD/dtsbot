@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-import mx.pm.sat.ape1.dtsbot.exception.DtsBotException;
 import org.springframework.ai.chat.messages.Message;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -51,7 +50,7 @@ public class DtsbotApplication implements CommandLineRunner {
                 if(incidentList == null){
                     throw new Exception("insumos is null");
                 }
-                log.debug("fond {} insumos", incidentList.size());
+                log.info("fond {} insumos", incidentList.size());
 
                 List<Message> messagesContextList;
                 try {
@@ -60,8 +59,21 @@ public class DtsbotApplication implements CommandLineRunner {
                     log.error(e.getMessage());
                     return;
                 }
+                
+                if(messagesContextList == null) {
+                    log.error("messagesContextList is null");
+                    return;
+                }
+                
+                if(messagesContextList.isEmpty()) {
+                    log.warn("messagesContextList is empty");
+                    return;
+                }
+                
+                log.info("Message context size: {}", messagesContextList.size());
 
                 for (Incident incident : incidentList) {
+                    log.debug("Processing: {}", incident.originalText());
                     IncidentProcessResponse incidentProcessResponse;
                     if (!environmentService.isUseFakeIa()) {
                         incidentProcessResponse = dtsCallService.proceessCall(messagesContextList, incident);

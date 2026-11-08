@@ -1,0 +1,5 @@
+@echo off
+cls
+set JAVA_HOME=C:\sft\java\jdk-21.0.12.1
+%JAVA_HOME%/bin/java -jar target/dtsbot-0.0.1-SNAPSHOT.jar
+pause
