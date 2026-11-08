@@ -41,7 +41,10 @@ public abstract class SoUtil {
 
             // Wait for the process to complete and check the exit code
             return process.waitFor();
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
+            throw new SoUtilException(e);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
             throw new SoUtilException(e);
         }
     }

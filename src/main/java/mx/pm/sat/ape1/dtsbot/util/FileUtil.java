@@ -14,7 +14,15 @@ public abstract class FileUtil {
 
         // Remove leading/trailing dots or spaces (prevents hidden files or weird shell
         // behavior)
-        sanitized = sanitized.replaceAll("^[._-]+|[._-]+$", "");
+        int start = 0;
+        int end = sanitized.length();
+        while (start < end && isBoundaryCharacter(sanitized.charAt(start))) {
+            start++;
+        }
+        while (end > start && isBoundaryCharacter(sanitized.charAt(end - 1))) {
+            end--;
+        }
+        sanitized = sanitized.substring(start, end);
 
         // Prevent empty strings after stripping
         if (sanitized.isBlank()) {
@@ -31,6 +39,10 @@ public abstract class FileUtil {
         return sanitized;
     }
 
+    private static boolean isBoundaryCharacter(char character) {
+        return character == '.' || character == '_' || character == '-';
+    }
+
     public static String removeExtension(String input) {
         if (input == null || input.isBlank()) {
             return null;
@@ -38,7 +50,7 @@ public abstract class FileUtil {
         if (!input.contains(".")) {
             return input;
         }
-        String[] source = input.split(".");
+        String[] source = input.split("\\.");
         String[] target = Arrays.copyOf(source, source.length - 1);
         return String.join(".", target);
     }
