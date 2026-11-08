@@ -41,3 +41,6 @@ insumos/
 /context.txt
 dtsbot_py.spec
 logs/
+/.sonar
+sonar.bat
+
