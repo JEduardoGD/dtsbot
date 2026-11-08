@@ -1,0 +1,13 @@
+Prerequisites:
+ - git (https://github.com/git-for-windows/git/releases/download/v2.56.0.windows.4/Git-2.56.0.4-64-bit.exe)
+ - JDK 21 https://download.oracle.com/java/21/archive/jdk-21.0.12.1_windows-x64_bin.zip
+ - MAVEN 3.9 https://dlcdn.apache.org/maven/maven-3/3.9.16/binaries/apache-maven-3.9.16-bin.zip
+ - Python 3.13 https://www.python.org/ftp/python/3.13.16/Python-3.13.16.tar.xz
+
+Instructions:
+1. Clone repo
+2. Create and edit update_dtsbot.bat (from update_dtsbot.bat.example)
+3. Create and edit .env file (from .env.example file)
+4. Create and edit context.txt (from context.txt.example)
+5. Create and edit update_dtsbot.bat (from update_dtsbot.bat.example)
+5. Run update_dtsbot.bat
