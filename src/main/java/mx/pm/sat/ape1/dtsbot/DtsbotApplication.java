@@ -72,7 +72,7 @@ public class DtsbotApplication implements CommandLineRunner {
 
                 short i = 1;
                 for (Incident incident : incidentList) {
-                    log.debug("Processing: {} / {}: {}", i++, incidentList.size(), incident.originalText());
+                    log.info("Processing: {} / {}: {}", i++, incidentList.size(), incident.originalText());
                     IncidentProcessResponse incidentProcessResponse;
                     if (!environmentService.isUseFakeIa()) {
                         incidentProcessResponse = dtsCallService.proceessCall(messagesContextList, incident);
