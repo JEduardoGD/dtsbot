@@ -45,6 +45,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
     public void process(Incident incident, IncidentProcessResponse incidentProcessResponse, LocalDateTime localDateTime)
             throws EvaluatorServiceException {
         String incidentPropertiesfileBasename = null;
+        log.info("Procesando {}", incident.incs());
         String safeIincidentPropertiesfileBasename = null;
         try {
             incidentPropertiesfileBasename = OnFlyVarsUtil.getFileBaseName(incident);
@@ -131,7 +132,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
 
         if (incidentProcessResponse.likely().compareTo(EvaluatorStaticValues.LOW_LIMIT) >= 0) {
             try {
-                createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident);
+                createPropertiesIncsService.createIncsPropertiesFile(parentPath, incident, incidentProcessResponse);
             } catch (CreatePropertiesIncsServiceException e) {
                 throw new EvaluatorServiceException(e);
             }
@@ -139,6 +140,7 @@ public class EvaluatorServiceImpl implements EvaluatorService {
             try {
                 if (SoUtil.runningSoInstructions(pythonCommand/* , "dtsbot_py" */) != 0) {
                     log.error("An error occurs on running so call");
+                    throw new EvaluatorServiceException("An error occurs on running so call");
                 }
             } catch (SoUtilException e) {
                 throw new EvaluatorServiceException(e);

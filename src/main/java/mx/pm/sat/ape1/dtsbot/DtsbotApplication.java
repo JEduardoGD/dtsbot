@@ -31,9 +31,7 @@ public class DtsbotApplication implements CommandLineRunner {
     private final EvaluatorService evaluatorService;
     private final EnvironmentService environmentService;
 
-    private static final String DEFAULT_REASONING = """
-            El mensaje reporta lentitud extrema en el aplicativo CertiSat CRM, con tiempos superiores a 10 minutos para revocar y generar certificados, lo que corresponde directamente a la categoría "lentitud en certisat"
-            """;
+    private static final String DEFAULT_REASONING = "RAZONAMIENTO INTELIGENCIA MOCK: El mensaje reporta lentitud extrema en el aplicativo CertiSat CRM, con tiempos superiores a 10 minutos para revocar y generar certificados, lo que corresponde directamente a la categoría \"lentitud en certisat\"";
 
     public static void main(String[] args) {
         SpringApplication.run(DtsbotApplication.class, args);
@@ -72,8 +70,9 @@ public class DtsbotApplication implements CommandLineRunner {
                 
                 log.info("Message context size: {}", messagesContextList.size());
 
+                short i = 1;
                 for (Incident incident : incidentList) {
-                    log.debug("Processing: {}", incident.originalText());
+                    log.debug("Processing: {} / {}: {}", i++, incidentList.size(), incident.originalText());
                     IncidentProcessResponse incidentProcessResponse;
                     if (!environmentService.isUseFakeIa()) {
                         incidentProcessResponse = dtsCallService.proceessCall(messagesContextList, incident);
