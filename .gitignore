@@ -40,7 +40,7 @@ results/
 insumos/
 /context.txt
 dtsbot_py.spec
-logs/
+/logs
 /.sonar
 sonar.bat
 
