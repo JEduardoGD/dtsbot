@@ -1,0 +1,497 @@
+2026-11-07 09:07:40.374 - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 30940 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:07:40.377 - m.p.s.a.d.DtsbotApplication - Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-07 09:07:40.379 - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:07:40.437 - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-07 09:07:43.240 - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 3.499 seconds (process running for 4.862)
+2026-11-07 09:07:43.247 - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 09:07:43.971 - m.p.s.a.d.s.i.LoadInsumosServiceImpl - loading 'insumos\Universo CERTISAT.xlsx'
+2026-11-07 09:07:43.988 - m.p.s.a.d.DtsbotApplication - fond 0 insumos
+2026-11-07 09:07:43.993 - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 09:07:43.995 - m.p.s.a.d.DtsbotApplication - fond 0 insumos
+2026-11-07 09:08:47.251 - (INFO 2026-11-07 09:08:47.256 - (DEBUG2026-11-07 09:08:47.256 - (INFO 2026-11-07 09:08:47.318 - (INFO 2026-11-07 09:08:50.544 - (INFO 2026-11-07 09:08:50.555 - (DEBUG2026-11-07 09:08:51.999 - (DEBUG2026-11-07 09:08:52.038 - (DEBUG2026-11-07 09:08:52.047 - (DEBUG2026-11-07 09:08:52.051 - (DEBUG2026-11-07 09:09:31.971 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 25908 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:09:31.974 - DEBUG - m.p.s.a.d.DtsbotApplication - Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-07 09:09:31.975 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:09:32.037 - INFO  - o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-07 09:09:33.813 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.491 seconds (process running for 3.926)
+2026-11-07 09:09:33.819 - DEBUG - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 09:09:34.435 - DEBUG - m.p.s.a.d.s.i.LoadInsumosServiceImpl - loading 'insumos\Universo CERTISAT.xlsx'
+2026-11-07 09:09:34.448 - DEBUG - m.p.s.a.d.DtsbotApplication - fond 0 insumos
+2026-11-07 09:09:34.453 - DEBUG - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 09:09:34.455 - DEBUG - m.p.s.a.d.DtsbotApplication - fond 0 insumos
+2026-11-07 09:11:25.067 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 26712 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:11:25.071 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:11:27.018 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.62 seconds (process running for 3.845)
+2026-11-07 09:12:18.237 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 18536 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:12:18.241 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:12:20.029 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.439 seconds (process running for 3.687)
+2026-11-07 09:16:53.070 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 5136 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:16:53.076 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:16:54.924 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.554 seconds (process running for 3.81)
+2026-11-07 09:18:00.199 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 1716 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:18:00.207 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:18:02.826 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 3.395 seconds (process running for 5.696)
+2026-11-07 09:18:08.374 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:08.596 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:08.799 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:09.028 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:09.280 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:09.494 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:09.694 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:09.902 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:10.117 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:10.400 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:10.651 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:10.852 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:11.045 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:11.283 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:11.517 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:11.752 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:11.941 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:12.171 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:12.441 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:12.672 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:12.918 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:13.133 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:13.387 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:13.603 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:13.866 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:14.289 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:14.617 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:14.819 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:15.006 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:15.242 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:15.460 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:15.719 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:15.909 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:16.106 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:16.336 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:16.537 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:16.739 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:16.977 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:18:17.187 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:20.408 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 16964 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:19:20.411 - DEBUG - m.p.s.a.d.DtsbotApplication - Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-07 09:19:20.412 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:19:22.367 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.58 seconds (process running for 3.909)
+2026-11-07 09:19:22.373 - DEBUG - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 09:19:26.712 - DEBUG - m.p.s.a.d.s.i.LoadInsumosServiceImpl - loading 'insumos\CERTISAT_AUTOM.xlsx'
+2026-11-07 09:19:26.908 - DEBUG - m.p.s.a.d.DtsbotApplication - fond 513 insumos
+2026-11-07 09:19:27.336 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:27.347 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:27.644 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:27.657 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:27.907 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:27.916 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:28.147 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:28.159 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:28.427 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:28.434 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:28.682 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:28.692 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:19:28.945 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:19:28.955 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:42.746 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication using Java 21.0.12.1 with PID 19548 (C:\ws\pm\dtsbot\target\classes started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 09:22:42.748 - DEBUG - m.p.s.a.d.DtsbotApplication - Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-07 09:22:42.749 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 09:22:44.017 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 1.731 seconds (process running for 2.5)
+2026-11-07 09:22:44.021 - DEBUG - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 09:22:47.426 - DEBUG - m.p.s.a.d.s.i.LoadInsumosServiceImpl - loading 'insumos\CERTISAT_AUTOM.xlsx'
+2026-11-07 09:22:47.682 - DEBUG - m.p.s.a.d.DtsbotApplication - fond 513 insumos
+2026-11-07 09:22:47.919 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:47.924 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:48.164 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:48.177 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:48.408 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:48.417 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:48.688 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:48.699 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:48.946 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:48.956 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:49.185 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:49.193 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:49.412 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:49.421 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:49.629 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:49.639 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:49.845 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:49.854 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:50.169 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:50.178 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:50.402 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:50.410 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:50.656 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:50.665 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:50.899 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:50.906 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:51.129 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:51.137 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:51.391 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:51.404 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:51.617 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:51.627 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:51.899 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:51.908 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:52.151 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:52.163 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:52.399 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:52.408 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:52.638 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:52.648 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:52.887 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:52.900 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:53.145 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:53.153 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:53.393 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:53.403 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:53.631 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:53.643 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:53.962 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:53.980 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:54.227 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:54.239 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:54.500 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:54.509 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:54.756 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:54.765 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:55.007 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:55.019 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:55.280 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:55.287 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:55.541 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:55.550 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 09:22:55.818 - DEBUG - m.p.s.a.d.u.SoUtil - Python Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 09:22:55.830 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - Error running so call
+2026-11-07 13:50:49.564 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 18464 (C:\ws\pm\dtsbot\target\dtsbot-0.0.1-SNAPSHOT.jar started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 13:50:49.569 - DEBUG - m.p.s.a.d.DtsbotApplication - Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-07 13:50:49.569 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 13:50:51.083 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.093 seconds (process running for 2.68)
+2026-11-07 13:50:51.083 - DEBUG - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 13:50:53.163 - DEBUG - m.p.s.a.d.s.i.LoadInsumosServiceImpl - loading 'insumos\CERTISAT_AUTOM.xlsx'
+2026-11-07 13:50:53.312 - DEBUG - m.p.s.a.d.DtsbotApplication - fond 513 insumos
+2026-11-07 13:50:53.450 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:53.454 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:53.549 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:53.549 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:53.645 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:53.645 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:53.739 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:53.753 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:53.848 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:53.848 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:53.943 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:53.957 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.055 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.055 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.150 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.150 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.253 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.253 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.356 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.356 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.453 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.467 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.565 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.565 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.660 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.660 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.770 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.770 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.874 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.874 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:54.960 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:54.975 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.086 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.089 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.183 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.183 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.292 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.292 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.387 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.387 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.481 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.497 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.592 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.592 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.706 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.706 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.799 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.799 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:55.894 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:55.910 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.005 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.005 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.105 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.105 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.208 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.211 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.306 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.306 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.407 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.407 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.513 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.513 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.608 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.608 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.720 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.728 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.814 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.814 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:56.925 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:56.925 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.020 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.020 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.115 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.115 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.216 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.216 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.313 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.325 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.417 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.417 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.518 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.518 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.615 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.622 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.720 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.720 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.823 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.823 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:57.920 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:57.925 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.017 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.023 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.121 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.121 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.207 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.223 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.321 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.321 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.424 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.424 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.523 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.525 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.621 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.621 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.716 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.716 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.820 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.820 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:58.906 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:58.922 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.016 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.023 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.113 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.113 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.217 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.217 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.317 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.317 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.412 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.412 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.513 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.523 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.618 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.618 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.717 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.717 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.817 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.817 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:50:59.920 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:50:59.920 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.021 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.023 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.119 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.125 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.219 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.219 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.322 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.322 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.422 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.425 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.520 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.520 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:51:00.620 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:51:00.623 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:52.300 - INFO  - m.p.s.a.d.DtsbotApplication - Starting DtsbotApplication v0.0.1-SNAPSHOT using Java 21.0.12.1 with PID 27624 (C:\ws\pm\dtsbot\target\dtsbot-0.0.1-SNAPSHOT.jar started by agente6 in C:\ws\pm\dtsbot)
+2026-11-07 13:56:52.307 - DEBUG - m.p.s.a.d.DtsbotApplication - Running with Spring Boot v4.1.2, Spring v7.0.10
+2026-11-07 13:56:52.309 - INFO  - m.p.s.a.d.DtsbotApplication - No active profile set, falling back to 1 default profile: "default"
+2026-11-07 13:56:53.900 - INFO  - m.p.s.a.d.DtsbotApplication - Started DtsbotApplication in 2.183 seconds (process running for 2.791)
+2026-11-07 13:56:53.900 - DEBUG - m.p.s.a.d.DtsbotApplication - loading insumos...
+2026-11-07 13:56:55.920 - DEBUG - m.p.s.a.d.s.i.LoadInsumosServiceImpl - loading 'insumos\CERTISAT_AUTOM.xlsx'
+2026-11-07 13:56:56.046 - DEBUG - m.p.s.a.d.DtsbotApplication - fond 513 insumos
+2026-11-07 13:56:56.189 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.189 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.301 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.301 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.394 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.394 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.506 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.506 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.617 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.623 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.723 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.729 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.835 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.841 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:56.951 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:56.953 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.062 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.062 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.171 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.171 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.284 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.284 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.393 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.393 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.503 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.503 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.614 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.614 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.720 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.724 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.824 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.824 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:57.930 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:57.930 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.046 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.046 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.152 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.152 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.263 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.263 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.378 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.378 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.484 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.484 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.595 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.595 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.706 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.706 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.813 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.813 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:58.923 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:58.927 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.028 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.028 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.133 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.133 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.251 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.253 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.358 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.358 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.465 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.465 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.577 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.579 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.686 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.686 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.806 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.813 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:56:59.919 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:56:59.923 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.037 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.042 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.147 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.147 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.257 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.260 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.367 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.375 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.479 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.479 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.582 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.595 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.686 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.702 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.798 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.798 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:00.909 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:00.909 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.023 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.030 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.132 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.132 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.236 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.243 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.353 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.355 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.450 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.469 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.564 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.579 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.673 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.689 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.793 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.800 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:01.910 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:01.910 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.007 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.021 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.132 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.134 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.237 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.242 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.371 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.371 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.479 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.479 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.595 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.595 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.706 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.706 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.819 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.819 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:02.924 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:02.924 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.036 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.036 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.140 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.146 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.241 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.241 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.357 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.357 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.465 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.465 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.574 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.574 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.686 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.686 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.797 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.800 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:03.893 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:03.893 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.003 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.003 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.125 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.129 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.234 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.240 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.340 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.351 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.460 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.462 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.577 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.577 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.686 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.686 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.796 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.796 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:04.908 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:04.908 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.019 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.019 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.129 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.129 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.242 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.246 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.351 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.351 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.467 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.467 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.580 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.580 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.699 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.699 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
+2026-11-07 13:57:05.809 - DEBUG - m.p.s.a.d.u.SoUtil - Py Output: Error: no se encontro "C:\ws\pm\dtsbot\dist\dtsbot_py.exe". Genera primero el ejecutable con PyInstaller.
+2026-11-07 13:57:05.809 - ERROR - m.p.s.a.d.s.i.EvaluatorServiceImpl - An error occurs on running so call
