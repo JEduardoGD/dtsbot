@@ -36,3 +36,11 @@ build/
 .env
 /run.bat
 /compile.bat
+results/
+insumos/
+/context.txt
+dtsbot_py.spec
+/logs
+/.sonar
+sonar.bat
+

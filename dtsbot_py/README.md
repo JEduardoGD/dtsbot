@@ -1,0 +1,49 @@
+# dtsbot_py
+
+El objetivo del proyecto es generar archivos DTS en formato Word a partir de un archivo de propiedades TXT y una plantilla Word. El script `dtsbot_py.py` requiere las rutas absolutas del archivo de propiedades, `NNNNNNN_DTS.docx` y la carpeta existente donde se guardará el resultado:
+
+```text
+python dtsbot_py.py "C:\ruta\absoluta\INCS00003799504\INCS00003799504.txt" "C:\ruta\absoluta\examples\NNNNNNN_DTS.docx" "C:\ruta\absoluta\salida"
+```
+
+En Linux, dale permiso de ejecución una vez con `chmod +x run_dtsbot_py.sh`; después ejecútalo desde la raíz del repositorio con los mismos tres argumentos (requiere `python3` y las dependencias instaladas):
+
+```sh
+./run_dtsbot_py.sh "/ruta/absoluta/INCS00003799504/INCS00003799504.txt" "/ruta/absoluta/examples/NNNNNNN_DTS.docx" "/ruta/absoluta/salida"
+```
+
+Instala la dependencia antes de ejecutar el script:
+
+```text
+python -m pip install -r requirements.txt
+```
+
+El ejecutable de un solo archivo se genera desde la raíz del repositorio con `python -m PyInstaller --onefile .\dtsbot_py\dtsbot_py.py` y queda en `dist\dtsbot_py.exe`. Para invocarlo mediante el lanzador de Windows desde la raíz, pasa los mismos tres argumentos (entre comillas si las rutas contienen espacios):
+
+```text
+run_dtsbot_exe.bat "C:\ruta\absoluta\INCS00003799504\INCS00003799504.txt" "C:\ruta\absoluta\examples\NNNNNNN_DTS.docx" "C:\ruta\absoluta\salida"
+```
+
+El archivo debe contener una propiedad por línea, separada por `=` o `:`. El directorio y el nombre del archivo deben ser `INCS<número>` (por ejemplo, `INCS00003799504/INCS00003799504.txt`), y la propiedad `número` debe coincidir con ese número. También son obligatorias, con valor no vacío y sin duplicados, las propiedades `número`, `IDENTIFICACION_DEL_PROBLEMA` y `FECHA_ANALISIS`; esta última debe contener una fecha válida con formato `DD/MM/AAAA`. Si la fecha no coincide con el día de ejecución, el script muestra una advertencia y continúa. Si una validación falla, muestra un error y termina con código `1`. Si todo es correcto, copia `examples/NNNNNNN_DTS.docx` como `<número>_DTS.docx`, reemplaza todas las apariciones de los marcadores de las propiedades en el cuerpo, tablas, encabezados y pies de página, y falla si alguno de los marcadores no está en el documento.
+
+Actualmente también contiene documentos de ejemplo en `examples/` y un archivo de referencia en `INCS00003799504/`.
+
+## Historial
+
+- 2026-11-01: Se crean este README y `AGENTS.md` para documentar el proyecto y orientar futuras actualizaciones.
+- 2026-11-01: Se añade Git al proyecto.
+- 2026-11-01: Se define como objetivo generar archivos DTS de Word a partir de un archivo de propiedades y un archivo de ejemplo.
+- 2026-11-01: Se añade `dtsbot_py.py` como punto de entrada mínimo.
+- 2026-11-01: Se requiere un archivo TXT de propiedades como argumento del script.
+- 2026-11-01: El script lee propiedades con formato `NOMBRE= valor` y las muestra en pantalla.
+- 2026-11-01: Se valida que el número de incidente coincida entre directorio, nombre de archivo y propiedad `número`.
+- 2026-11-01: Tras validar las propiedades, se copia la plantilla DTS al directorio del incidente con su número en el nombre.
+- 2026-11-01: Se exigen las propiedades `número`, `IDENTIFICACION_DEL_PROBLEMA` y `FECHA_ANALISIS` con valores no vacíos.
+- 2026-11-01: Se valida que `FECHA_ANALISIS` sea una fecha existente con formato `DD/MM/AAAA`.
+- 2026-11-01: Se advierte si `FECHA_ANALISIS` no coincide con la fecha de ejecución, sin interrumpir el proceso.
+- 2026-11-01: Se añade `python-docx` para reemplazar todas las apariciones de las propiedades en el documento DTS generado.
+- 2026-11-06: Se exige que la ruta del archivo TXT de propiedades se pase como ruta absoluta.
+- 2026-11-06: Se exige que la ruta absoluta de la plantilla `NNNNNNN_DTS.docx` se pase como argumento.
+- 2026-11-06: Se recibe como argumento obligatorio la ruta absoluta de la carpeta de salida.
+- 2026-11-06: Se documenta la generación del ejecutable de un solo archivo y su invocación desde Windows mediante `run_dtsbot_exe.bat`.
+- 2026-11-06: Se añade el lanzador `run_dtsbot_py.sh` para ejecutar el script Python desde Linux con sus tres argumentos.

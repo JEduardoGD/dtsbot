@@ -5,11 +5,13 @@ import java.util.List;
 import org.springframework.ai.chat.messages.Message;
 
 import mx.pm.sat.ape1.dtsbot.dto.Incident;
+import mx.pm.sat.ape1.dtsbot.dto.IncidentProcessResponse;
+import mx.pm.sat.ape1.dtsbot.service.exception.DtsCallServiceException;
 
 public interface DtsCallService {
 
-    List<Message> loadContext();
+    List<Message> loadContext() throws DtsCallServiceException;
 
-    Incident proceessCall(List<Message> contextList, String call);
+    IncidentProcessResponse proceessCall(List<Message> messagesContextList, Incident incident);
 
 }

@@ -1,0 +1,29 @@
+{
+	"properties": [
+		{
+			"name": "insumos.loation",
+			"type": "java.lang.String",
+			"description": "A description for 'insumos.loation'"
+		},
+		{
+			"name": "env.use_fake_ia",
+			"type": "java.lang.String",
+			"description": "A description for 'env.use_fake_ia'"
+		},
+		{
+			"name": "env.so",
+			"type": "java.lang.String",
+			"description": "A description for 'env.so'"
+		},
+		{
+			"name": "spring.jpa.properties.hibernate.jdbc.time_zone",
+			"type": "java.lang.String",
+			"description": "A description for 'spring.jpa.properties.hibernate.jdbc.time_zone'"
+		},
+		{
+			"name": "dtstemplate.location",
+			"type": "java.lang.String",
+			"description": "A description for 'dtstemplate.location'"
+		}
+	]
+}
