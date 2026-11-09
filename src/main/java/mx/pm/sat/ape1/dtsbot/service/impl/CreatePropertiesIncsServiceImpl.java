@@ -12,6 +12,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import mx.pm.sat.ape1.dtsbot.dto.Incident;
+import mx.pm.sat.ape1.dtsbot.dto.IncidentProcessResponse;
 import mx.pm.sat.ape1.dtsbot.service.CreatePropertiesIncsService;
 import mx.pm.sat.ape1.dtsbot.service.exception.CreatePropertiesIncsServiceException;
 import mx.pm.sat.ape1.dtsbot.util.OnFlyVarsUtil;
@@ -24,7 +25,7 @@ public class CreatePropertiesIncsServiceImpl implements CreatePropertiesIncsServ
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     @Override
-    public void createIncsPropertiesFile(Path parentPath, Incident incident) throws CreatePropertiesIncsServiceException {
+    public void createIncsPropertiesFile(Path parentPath, Incident incident, IncidentProcessResponse incidentProcessResponse) throws CreatePropertiesIncsServiceException {
 
         int numeroIncs = OnFlyVarsUtil.extractNumFromIncs(incident);
 
@@ -33,6 +34,8 @@ public class CreatePropertiesIncsServiceImpl implements CreatePropertiesIncsServ
         lines.add(String.format("número: %s", numeroIncs));
         lines.add(String.format("IDENTIFICACION_DEL_PROBLEMA: %s", incident.originalText()));
         lines.add(String.format("FECHA_ANALISIS: %s", LocalDate.now().format(formatter)));
+        lines.add(String.format("REASONING: %s", incidentProcessResponse.reasoning()));
+        lines.add(String.format("LIKELY: %s", incidentProcessResponse.likely()));
 
         try {
             Path path = Paths.get(OnFlyVarsUtil.createIncPropertiesFileRoute(parentPath, incident));
